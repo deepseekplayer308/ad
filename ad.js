@@ -291,7 +291,7 @@ function setupWebSocket() {
 	var a = trimPathName(document.location.href);
 	(a.charAt(0) == "?") ? a = "/" + a.slice(1): a
 	pendingRequest || (a = "/notify" + a)
-	socket = new WebSocket("wss://" + "deepseekplayer308.decltype.org" + "/ws" + a) //window.location.hostname
+	socket = new WebSocket("wss://" + "kamadan.decltype.org" + "/ws" + a) //window.location.hostname
 	socket.onclose = function (a) {
 		clearTimeout(reconnectTimer)
 		reconnectTimer = setTimeout(setupWebSocket, reconnectDelayMs)
