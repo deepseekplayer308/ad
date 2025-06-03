@@ -32,7 +32,7 @@ var resultsPerPage = 25,
 	追踪项 = [],
 	近期广告 = [],
 	静音时间 = 5,
-	网址 = new RegExp("^https\:\/\/kamadan\.github\.io\/" + encodeURIComponent("ad") + "(\\?{0,1}.*?)$", "i")
+	网址 = new RegExp("^https\:\/\/deepseekplayer308\.github\.io\/" + encodeURIComponent("ad") + "(\\?{0,1}.*?)$", "i")
 
 var animationEnd = 0,
 	animationLengthMs = 500,
@@ -291,7 +291,7 @@ function setupWebSocket() {
 	var a = trimPathName(document.location.href);
 	(a.charAt(0) == "?") ? a = "/" + a.slice(1): a
 	pendingRequest || (a = "/notify" + a)
-	socket = new WebSocket("wss://" + "kamadan.decltype.org" + "/ws" + a) //window.location.hostname
+	socket = new WebSocket("wss://" + "deepseekplayer308.decltype.org" + "/ws" + a) //window.location.hostname
 	socket.onclose = function (a) {
 		clearTimeout(reconnectTimer)
 		reconnectTimer = setTimeout(setupWebSocket, reconnectDelayMs)
